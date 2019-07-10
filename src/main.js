@@ -28,9 +28,10 @@ $(document).ready(function() {
     let crew2 = new Crew("male",25,"Pianist");
     let crew3 = new Crew("female",99,"Witch");
     let crew4 = new Crew("female",17,"Minor");
+    let crew5 = new Crew("female",25,"Doctor");
     let whyGod = new SpaceEvents;
-    missionEnvoy.crew = [crew1,crew2,crew3,crew4];
-    let pause = 1;
+    missionEnvoy.crew = [crew1,crew2,crew3,crew4,crew5];
+    // let pause = 1;
     for (let p = 0; p <= 20; p++) {
       planetArray[p] = new Planets();
     }
@@ -66,11 +67,10 @@ $(document).ready(function() {
       $("#shipWeapons").html("ship ammo: " + missionEnvoy.ammo);
       $("#travelDistance").html("Distance: " + missionEnvoy.distance);
       $("#distanceTraveled").html("<progress id='distanceTraveled' value=" + Math.floor(missionEnvoy.distance * 100 / 600000) + " max='100'></progress>");
-
       $("#shipOre").html("ship materials: " + missionEnvoy.materials);
       $("#shipParts").html("ship parts: " + missionEnvoy.parts);
       for (let i = 0; i < missionEnvoy.crew.length; i++) {
-        $("#e0").append("crew" + i + "health: " + missionEnvoy.crew[i].health);
+        $("#health" + i).html("<progress id='health' value=" + Math.floor(missionEnvoy.crew[i].health / 3) + " max='100'></progress>");
       }
       spaceHappenings(missionEnvoy.distance);
       deathCheck();
