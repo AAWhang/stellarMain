@@ -118,36 +118,36 @@ $(document).ready(function() {
     function thingsHappen(){
       let die1 = Math.floor(Math.random() * 10 + 1);
       if (die1 === 1){
-        alert("gravityWell");
+        $("p#eventText").html("gravityWell");
         missionEnvoy.fuel = whyGod.gravityWell(missionEnvoy.fuel);
       }
       if (die1 === 2){
-        alert("astroidBelt");
+        $("p#eventText").html("astroidBelt");
         missionEnvoy = whyGod.astroidBelt(missionEnvoy);
       }
       if (die1 === 3){
-        alert("meteors");
+        $("p#eventText").html("meteors");
         missionEnvoy = whyGod.meteors(missionEnvoy);
       }
       if (die1 === 4){
-        alert("spacePirates");
+        $("p#eventText").html("spacePirates");
         missionEnvoy = whyGod.spacePirates(missionEnvoy);
       }
       if (die1 === 5){
 
-        alert("spaceVirus");
+        $("p#eventText").html("spaceVirus");
         whyGod.spaceVirus(missionEnvoy.crew);
       }
       if (die1 === 6){
-        alert("spaceMadness");
+        $("p#eventText").html("spaceMadness");
         whyGod.spaceMadness(missionEnvoy.crew);
       }
       if (die1 === 7){
-        alert("you find alien!");
+        $("p#eventText").html("you find alien!");
         whyGod.alienEncounter(missionEnvoy.crew);
       }
       if (die1 === 8){
-        alert("wormhole");
+        $("p#eventText").html("wormhole");
         missionEnvoy.distance = whyGod.wormhole(missionEnvoy.distance);
       }
       if (die1 === 9){
