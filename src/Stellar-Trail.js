@@ -20,10 +20,7 @@ export class Ship {
 
 
 export class Crew {
-    constructor(gender,age,occupation) {
-      this.gender = gender;
-      this.age = age;
-      this.occupation = occupation;
+    constructor() {
       this.health = 300;
     }
 }
